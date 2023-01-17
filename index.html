@@ -1,3 +1,483 @@
-Hello world
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-Finally!
+    <title>Audio samples from "Parallel Tacotron 2: A Non-Autoregressive Neural TTS Model with Differentiable Duration Modeling"</title>
+    <link rel="stylesheet" type="text/css" href="index_fitxategiak/stylesheet.css">
+    <link rel="shortcut icon" href="https://google.github.io/tacotron/images/taco.png">
+  </head>
+  <body>
+    <div>
+      <article>
+        <header>
+          <h1>Parallel Tacotron 2: A Non-Autoregressive Neural TTS Model with Differentiable Duration Modeling</h1>
+        </header>
+      </article>
+
+      <p><b>Paper: </b><a href="https://arxiv.org/abs/2103.14574">arXiv</a></p>
+      <p><b>Authors: </b>Isaac Elias, Heiga Zen, Jonathan Shen, Yu Zhang, Ye Jia, RJ Skerry-Ryan, Yonghui Wu</p>
+
+      <p style="width: 500px;"> <b>Abstract:</b> This paper introduces <it>Parallel Tacotron
+2</it>, a new non-autoregressive neural text-to-speech model.  This
+model has fully differentiable duration modeling, learned upsampling
+mechanism based on attention, and an iterative reconstruction loss
+based on Soft Dynamic Time Warping. These features allow the model to
+learn alignments and token durations automatically, without requiring
+supervised duration signals.  Experimental results show that Parallel
+Tacotron 2 outperforms the baselines in naturalness in several diverse
+multi speaker evaluations.  Its duration control capability is also
+demonstrated.
+
+ </p>
+      <p><a href="https://google.github.io/tacotron/index.html">Click here for more from the Tacotron team.</a></p>
+
+      <h2>YOU WILL NEED TO WAIT FOR THE AUDIO FILES TO LOAD BEFORE PRESSING PLAY!</h2>
+      <p><a href="#main_eval">Main evaluation set</a></p>
+      <p><a href="#hold_out">Hold-out evaluation set</a></p>
+      <p><a href="#hard">Hard lines evaluation set</a></p>
+      <p><a href="#rapid">Rapid Reprompts evaluation set</a></p>
+      <p><a href="#questions">Questions evaluation set</a></p>
+      <p><a href="#global_dur">Global Duration/Pace Control</a></p>
+      <p><a href="#last_word_dur">Last word Duration Control</a></p>
+      <p><a href="#per_word_dur">Individual Word Duration Control</a></p>
+
+      <h2><a id="main_eval">Comparison among systems: Main Evaluation Set</a></h2>
+      <p><i>Random sample from Main Evaluation Set in the paper.</i></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parallel Tacotron 2</th><th>Parallel Tacotron Global VAE</th><th>Parallel Tacotron Fine VAE</th><th>Tacotron 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><span>1: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_621_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_621_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_621.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_621_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>2: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_56_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_56_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_56.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_56_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>3: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/iod_969.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iod_969_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iod_969_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iod_969_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>4: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_132.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_132_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_132_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_132_003.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>5: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_382_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_382_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_382.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_382_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>6: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_704_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_704_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_704_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_704.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>7: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_315.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_315_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_315_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_315_004.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>8: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_925_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_925.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_925_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_925_004.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2><a id="hold_out">Comparison among systems: Hold-out</a></h2>
+      <p><i>Random sample from Hold-out set in the paper.</i></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Ground Truth</th><th>Parallel Tacotron 2</th><th>Parallel Tacotron Global VAE</th><th>Parallel Tacotron Fine VAE</th><th>Tacotron 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><span>1: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107_005.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107_003.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>2: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323_005.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>3: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450_005.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>4: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905_005.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905_003.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>5: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732_005.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>6: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153_005.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>7: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094_005.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>8: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554_005.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554_002.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+      <h2><a id="hard">Comparison among systems: Hard Lines</a></h2>
+      <p><i>Random sample from Hard Lines in the paper.</i></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parallel Tacotron 2</th><th>Parallel Tacotron Global VAE</th><th>Parallel Tacotron Fine VAE</th><th>Tacotron 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><span>1: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_181_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_181_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_181_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_181.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>2: </span></td></tr>
+
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_176_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_176_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_176_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_176.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>3: </span></td></tr>
+
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_6.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_6_005.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_6_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_6_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>4: </span></td></tr>
+
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/iob_267.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iob_267_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iob_267_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iob_267_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>5: </span></td></tr>
+
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_258_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_258_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_258_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_258.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>6: </span></td></tr>
+
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_30.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_30_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_30_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_30_003.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>7: </span></td></tr>
+
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_143.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_143_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_143_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_143_003.wav" type="audio/wav"></audio></td>
+          </tr>
+
+          <tr><td colspan="6"><span>8: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_65.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_65_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_65_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_65_004.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2><a id="rapid">Comparison among systems: Rapid Reprompts</a></h2>
+      <p><i>Random sample from Rapid Reprompts in the paper.</i></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parallel Tacotron 2</th><th>Parallel Tacotron Global VAE</th><th>Parallel Tacotron Fine VAE</th><th>Tacotron 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><span>1: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_81_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_81_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_81_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_81.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>2: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_6_007.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_6_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_6_008.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_6_006.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>3: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/iob_77_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iob_77_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iob_77.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iob_77_004.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>4: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_38_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_38_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_38.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioc_38_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>5: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_22_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_22_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_22.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/jmp_22_004.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>6: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_43.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_43_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_43_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_43_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>7: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_95_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_95_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_95.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tfe_95_003.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>8: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_14.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_14_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_14_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_14_003.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2><a id="questions">Comparison among systems: Questions</a></h2>
+      <p><i>Random sample from Questions in the paper.</i></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parallel Tacotron 2</th><th>Parallel Tacotron Global VAE</th><th>Parallel Tacotron Fine VAE</th><th>Tacotron 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><span>1: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_151_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_151_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_151_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_151.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>2: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_51.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_51_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_51_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hol_51_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>3: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_76_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_76_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_76_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioa_76.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>4: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/iod_89_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iod_89_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iod_89.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/iod_89_004.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>5: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_240_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_240_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_240.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/ioe_240_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>6: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_223_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_223_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_223.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/sfg_223_002.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>7: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_124.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_124_004.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_124_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_124_003.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>8: </span></td></tr>
+          <tr>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_134_003.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_134_002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_134.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/tme_134_004.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <h2><a id="global_dur">Duration Controllability: Global pace control</a></h2>
+      <p><i>Global pace control with duration factors [0.75, 1.0, 1.25]</i></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Duration factor</th><th>Parallel Tacotron 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0.75</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/global_075.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td>1.0</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/global_10.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td>1.25</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/global_125.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2><a id="last_word_dur">Duration Controllability: Last word speed up and slow down</a></h2>
+      <p><i>Last word "Big Basin" is with duration factors [0.5, 1.0, 1.5]</i></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Duration factor</th><th>Parallel Tacotron 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0.5</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/word_last_05.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td>1.0</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/per_word_10.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td>1.5</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/word_last_15.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <h2><a id="per_word_dur">Duration Controllability: Per word slow down</a></h2>
+      <p><i>Different word in the sequence is slowed down by a factor of 1.5</i></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Duration factor</th><th>Parallel Tacotron 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>saddened</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/saddened_15.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td>hear about</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/hear_about_15.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td>devestation</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/devestation_15.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td>Big Basin</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/big_basin_15.wav" type="audio/wav"></audio></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+
+
+
+
+</body></html>
