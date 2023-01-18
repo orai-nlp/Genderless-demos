@@ -1,32 +1,38 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Audio samples from "Parallel Tacotron 2: A Non-Autoregressive Neural TTS Model with Differentiable Duration Modeling"</title>
+    <title>Audio samples from "Gender-ambiguous speech synthesis in Basque using speaker embedding manipulation"</title>
     <link rel="stylesheet" type="text/css" href="index_fitxategiak/stylesheet.css">
+<!--
     <link rel="shortcut icon" href="https://google.github.io/tacotron/images/taco.png">
+-->
+    <link rel="shortcut icon" href="logo.svg">
   </head>
   <body>
     <div>
       <article>
         <header>
-          <h1>Parallel Tacotron 2: A Non-Autoregressive Neural TTS Model with Differentiable Duration Modeling</h1>
+          <h1>Gender-ambiguous speech synthesis in Basque using speaker embedding manipulation</h1>
         </header>
       </article>
 
+<!--
       <p><b>Paper: </b><a href="https://arxiv.org/abs/2103.14574">arXiv</a></p>
-      <p><b>Authors: </b>Isaac Elias, Heiga Zen, Jonathan Shen, Yu Zhang, Ye Jia, RJ Skerry-Ryan, Yonghui Wu</p>
+-->
+      <p><b>Authors: </b>Xabier Sarasola, Ander Corral, Igor Leturia, Iñigo Morcillo</p>
 
-      <p style="width: 500px;"> <b>Abstract:</b> This paper introduces <it>Parallel Tacotron
-2</it>, a new non-autoregressive neural text-to-speech model.  This
-model has fully differentiable duration modeling, learned upsampling
-mechanism based on attention, and an iterative reconstruction loss
-based on Soft Dynamic Time Warping. These features allow the model to
-learn alignments and token durations automatically, without requiring
-supervised duration signals.  Experimental results show that Parallel
-Tacotron 2 outperforms the baselines in naturalness in several diverse
-multi speaker evaluations.  Its duration control capability is also
-demonstrated.
+      <p style="width: 500px;"> <b>Abstract:</b> There is a growing interest in text-to-speech (TTS)
+      systems with gender-ambiguous voices, among other things due to their potential to avoid gender
+      biases and stereotypes in voice assistants and smart speakers. In this paper we present and
+      evaluate some novel methods that apply voice morphing techniques to speaker embeddings in
+      order to obtain neural network-based gender-ambiguous voiced TTS systems for the Basque language.
+      The speaker embeddings are obtained training a multi-speaker Tacotron 2. We compare the
+      performance of systems with and without speaker embedding normalization with a scaling parameter,
+      and also the application of these systems to the average embeddings of each gender and to real
+      voice embeddings. The results prove that the methods presented are valid to obtain
+      gender-ambiguous voices with acceptable, albeit improvable, quality.
 
  </p>
+<!--
       <p><a href="https://google.github.io/tacotron/index.html">Click here for more from the Tacotron team.</a></p>
 
       <h2>YOU WILL NEED TO WAIT FOR THE AUDIO FILES TO LOAD BEFORE PRESSING PLAY!</h2>
@@ -38,152 +44,308 @@ demonstrated.
       <p><a href="#global_dur">Global Duration/Pace Control</a></p>
       <p><a href="#last_word_dur">Last word Duration Control</a></p>
       <p><a href="#per_word_dur">Individual Word Duration Control</a></p>
+-->
 
       <h2><a id="main_eval">Comparison among systems: Main Evaluation Set</a></h2>
-      <p><i>Random sample from Main Evaluation Set in the paper.</i></p>
+      <p><i>Fernando Buesa Arena laster batean izango da Lauko Finaleko egoitza.</i></p>
       <table>
         <thead>
           <tr>
-            <th>Parallel Tacotron 2</th><th>Parallel Tacotron Global VAE</th><th>Parallel Tacotron Fine VAE</th><th>Tacotron 2</th>
+            <th>Speaker</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td colspan="6"><span>1: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_621_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_621_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_621.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_621_002.wav" type="audio/wav"></audio></td>
+            <td>M(LP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_05679_00028498699.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_05679_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_05679_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_05679_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_05679_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>2: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioa_56_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioa_56_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioa_56.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioa_56_002.wav" type="audio/wav"></audio></td>
+			<td>M(MP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_04766_00019773734.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_04766_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_04766_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_04766_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_04766_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>3: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/iod_969.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/iod_969_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/iod_969_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/iod_969_002.wav" type="audio/wav"></audio></td>
+			<td>M(HP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_00610_00100474863.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_00610_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_00610_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_00610_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_00610_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>4: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_132.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_132_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_132_002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_132_003.wav" type="audio/wav"></audio></td>
+			<td>F(LP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_09697_00004230392.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_09697_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_09697_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_09697_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_09697_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>5: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_382_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_382_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_382.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_382_002.wav" type="audio/wav"></audio></td>
+			<td>F(MP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_00610_00052089154.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_00610_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_00610_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_00610_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_00610_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>6: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/tme_704_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tme_704_002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tme_704_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tme_704.wav" type="audio/wav"></audio></td>
+			<td>F(HP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_03853_00005203124.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_03853_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_03853_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_03853_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_euf_03853_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>7: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_315.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_315_002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_315_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_315_004.wav" type="audio/wav"></audio></td>
+			<td>C</td>
+            <td><center>-</center></td>
+            <td><center>-</center></audio></td>
+            <td><center>-</center></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_2_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>8: </span></td></tr>
+        </tbody>
+      </table>
+      
+      
+      <p><i>Patxi Pagoaga eskubaloi-jokalaria euskal atezainik onenetakoa izan zen.</i></p>
+      <table>
+        <thead>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_925_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_925.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_925_002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_925_004.wav" type="audio/wav"></audio></td>
+            <th>Speaker</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+            <td>M(LP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_05679_00062694752.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_05679_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_05679_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_05679_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_05679_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>M(MP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_04766_00031794906.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_04766_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_04766_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_04766_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_04766_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>M(HP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_00610_00124289009.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_00610_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_00610_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_00610_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_00610_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>F(LP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_09697_00037440680.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_09697_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_09697_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_09697_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_09697_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>F(MP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_00610_00127637712.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_00610_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_00610_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_00610_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_00610_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>F(HP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_03853_00050203180.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_03853_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_03853_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_03853_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_euf_03853_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>C</td>
+            <td><center>-</center></td>
+            <td><center>-</center></audio></td>
+            <td><center>-</center></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_22_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
         </tbody>
       </table>
 
-      <h2><a id="hold_out">Comparison among systems: Hold-out</a></h2>
-      <p><i>Random sample from Hold-out set in the paper.</i></p>
+      <p><i>Marlon Brando aktore mitikoak egindako film batzuek eztabaida handia sortu zuten.</i></p>
       <table>
         <thead>
           <tr>
-            <th>Ground Truth</th><th>Parallel Tacotron 2</th><th>Parallel Tacotron Global VAE</th><th>Parallel Tacotron Fine VAE</th><th>Tacotron 2</th>
+            <th>Speaker</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td colspan="6"><span>1: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107_005.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107_002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_241_76107_003.wav" type="audio/wav"></audio></td>
+            <td>M(LP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_05679_00236233676.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_05679_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_05679_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_05679_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_05679_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>2: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323_002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/hol_291_89323_005.wav" type="audio/wav"></audio></td>
+			<td>M(MP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_04766_00070721055.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_04766_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_04766_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_04766_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_04766_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>3: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450_005.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioc_008_02450_002.wav" type="audio/wav"></audio></td>
+			<td>M(HP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_00610_00150299736.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_00610_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_00610_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_00610_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_00610_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>4: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905_005.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905_002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/ioe_004_00905_003.wav" type="audio/wav"></audio></td>
+			<td>F(LP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_09697_00053002956.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_09697_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_09697_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_09697_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_09697_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>5: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732_005.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/jmp_033_08732_002.wav" type="audio/wav"></audio></td>
+			<td>F(MP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_00610_00153919039.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_00610_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_00610_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_00610_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_00610_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>6: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153_002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_004_00153_005.wav" type="audio/wav"></audio></td>
+			<td>F(HP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_03853_00083729925.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_03853_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_03853_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_03853_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_euf_03853_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>7: </span></td></tr>
+          <tr><td colspan="6"></td></tr>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094_002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tfe_009_90094_005.wav" type="audio/wav"></audio></td>
+			<td>C</td>
+            <td><center>-</center></td>
+            <td><center>-</center></audio></td>
+            <td><center>-</center></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_25_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
-          <tr><td colspan="6"><span>8: </span></td></tr>
+        </tbody>
+      </table>
+      
+      <p><i>Gaizka etortzen bada, nahiago dut etxean geratu.</i></p>
+      <table>
+        <thead>
           <tr>
-            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554_004.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554_003.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554_005.wav" type="audio/wav"></audio></td>
-            <td><audio controls="controls"><source src="index_fitxategiak/tme_037_90554_002.wav" type="audio/wav"></audio></td>
+            <th>Speaker</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+            <td>M(LP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_05679_00293280359.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_05679_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_05679_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_05679_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_05679_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>M(MP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_04766_00082920278.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_04766_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_04766_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_04766_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_04766_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>M(HP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/eum_00610_00162823994.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_00610_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_00610_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_00610_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_00610_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>F(LP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_09697_00056025208.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_09697_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_09697_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_09697_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_09697_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>F(MP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_00610_00168177116.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_00610_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_00610_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_00610_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_00610_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>F(HP)</td>
+            <td><audio controls="controls"><source src="index_fitxategiak/euf_03853_00163462847.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_03853_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_03853_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_03853_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_euf_03853_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"></td></tr>
+          <tr>
+			<td>C</td>
+            <td><center>-</center></td>
+            <td><center>-</center></audio></td>
+            <td><center>-</center></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_middle_euclidean.wav" type="audio/wav"></audio></td>
+            <td><audio controls="controls"><source src="index_fitxategiak/t_36_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
         </tbody>
       </table>
     </div>
 
+<!--
       <h2><a id="hard">Comparison among systems: Hard Lines</a></h2>
       <p><i>Random sample from Hard Lines in the paper.</i></p>
       <table>
@@ -473,6 +635,7 @@ demonstrated.
 
         </tbody>
       </table>
+-->
 
 
 
