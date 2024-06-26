@@ -1,6 +1,6 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Audio samples from "Gender-ambiguous speech synthesis in Basque using speaker embedding manipulation"</title>
+    <title>"Hizlari-bektore manipulazioaren bidezko genero-anbiguoko hizketaren sintesia euskaraz" lanaren audio adibideak</title>
     <link rel="stylesheet" type="text/css" href="index_fitxategiak/stylesheet.css">
 <!--
     <link rel="shortcut icon" href="https://google.github.io/tacotron/images/taco.png">
@@ -11,25 +11,24 @@
     <div>
       <article>
         <header>
-          <h1>Gender-ambiguous speech synthesis in Basque using speaker embedding manipulation</h1>
+          <h1>Hizlari-bektore manipulazioaren bidezko genero-anbiguoko hizketaren sintesia euskaraz</h1>
         </header>
       </article>
 
 <!--
       <p><b>Paper: </b><a href="https://arxiv.org/abs/2103.14574">arXiv</a></p>
 -->
-      <p><b>Authors: </b>Xabier Sarasola, Ander Corral, Igor Leturia, Iñigo Morcillo</p>
+      <p><b>Autoreak: </b>Xabier Sarasola, Ander Corral, Igor Leturia, Iñigo Morcillo</p>
 
-      <p style="width: 1000px;"> <b>Abstract:</b> There is a growing interest in text-to-speech (TTS)
-      systems with gender-ambiguous voices, among other things due to their potential to avoid gender
-      biases and stereotypes in voice assistants and smart speakers. In this paper we present and
-      evaluate some novel methods that apply voice morphing techniques to speaker embeddings in
-      order to obtain neural network-based gender-ambiguous voiced TTS systems for the Basque language.
-      The speaker embeddings are obtained training a multi-speaker Tacotron 2. We compare the
-      performance of systems with and without speaker embedding normalization with a scaling parameter,
-      and also the application of these systems to the average embeddings of each gender and to real
-      voice embeddings. The results prove that the methods presented are valid to obtain
-      gender-ambiguous voices with acceptable, albeit improvable, quality.
+      <p style="width: 1000px;"> <b>Laburpena:</b> Gero eta interes handiagoa dago genero-anbiguko ahotsa duten
+      text-to-speech (TTS) sistemetan, besteak beste, laguntzaile birtualetan eta bozgorailu adimendunetan
+      genero-alborapenak eta estereotipoak saihesteko duten ahalmenagatik. Artikulu honetan, ahots-bihurketa
+      teknika berriak aplikatzen dizkiegu ahots-bektoreei sare neuronaletan oinarritutako genero-anbiguoko
+      euskarazko TTS sistemak lortzeko. Hizlari-bektoreak hiztun anitzeko Tacotron 2-a entrenatuz lortzen dira.
+      Hizlari-bektoreen normalizazioa eta eskala parametro bat erabiltzen duten eta erabiltzen ez duten
+      sistemak konparatu ditugu, baita genero bakoitzaren batez besteko bektore eta ahots errealen bektoreetan
+      erabilera sistema horietan. Emaitzek frogatzen dute aurkeztutako metodoak genero-anbiguoko ahotsak
+      lortzeko baliozkoak direla kalitate onargarriak, baina hobetu daitezkenak, lortuz.
 
  </p>
 <!--
@@ -46,24 +45,26 @@
       <p><a href="#per_word_dur">Individual Word Duration Control</a></p>
 -->
 
-      <h2><a id="main_eval">Comparison among systems</a></h2>
+      <h2><a id="main_eval">Sistemen arteko konparaketa</a></h2>
       
-      <p style="width: 1000px;">In each listening block, the synthesis of the same sentence can be listened with different speakers and systems.
-			For the Ground Truth (GT) column, a random recording is selected from the training set.
-			The meaning of the acronyms are the next ones: </p>
+      <p style="width: 1000px;">Audio bloke bakoitzean esaldi beraren sintesia entzun daiteke hainbat hizlari eta sistemaren konbinazioarekin.
+			Grabazio originalen zutabean (GT) ausazko grabazio bat aukeratu da entrenamendu datubasetik.
+			Akronimoen esanahia ondorengoa da: </p>
 		<ul>
-		  <li>GT -> Ground Truth</li>
-		  <li>MT2 -> MultispeakerTacotron 2</li>
-		  <li>MT2-DLN -> Multis-peaker Tacotron 2 with Deep Length Normalization</li>
-		  <li>MT2+GA -> Multis-peaker Tacotron 2 with Gender Ambiguity manipulation</li>
-		  <li>MT2-DLN+GA -> Multis-peaker Tacotron 2 with Deep Length Normalization and Gender Ambiguity manipulation</li>
+		  <li>GT ->			Grabzio originalak</li>
+		  <li>MT2 ->		Tacotron 2 hizlari-anitza</li>
+		  <li>MT2-DLN ->	Deep Length Normalization daukan Tacotron 2 hizlari-anitza</li>
+		  <li>MT2+GA ->		Genero anbiguotasun manipulazioa duen Tacotron 2 hizlari-anitza</li>
+		  <li>MT2-DLN+GA ->	Deep Length Normalization eta genero-anbiguoko manipulazioa duen Tacotron 2 hizlari-anitza</li>
+<!--
 		  <li>M(LP) -> Male with Low Pitch</li>
-		  <li>M(MP) -> Male with Medium Pitch</li>
-		  <li>M(HP) -> Male with High Pitch</li>
-		  <li>F(LP) -> Female with Low Pitch</li>
-		  <li>F(MP) -> Female with Medium Pitch</li>
-		  <li>F(HP) -> Female with High Pitch</li>
-		  <li>C -> Gender-ambiguous Centroid</li>
+-->
+		  <li>G(FE) -> Frekuentzia nagusi ertaineko gizona</li>
+		  <li>G(FA) -> Frekuentzia nagusi altuko gizona</li>
+		  <li>E(FB) -> Frekuentzia nagusi baxuko emakumea</li>
+		  <li>E(FE) -> Frekuentzia nagusi ertaineko emakumea</li>
+		  <li>E(FA) -> Frekuentzia nagusi altuko emakumea</li>
+		  <li>C -> Genero-anbiguoko zentroidea</li>
 		</ul>
 	
 	  <h3><a id="main_eval">Audio Samples</a></h3>
@@ -72,10 +73,11 @@
       <table>
         <thead>
           <tr>
-            <th>Speaker</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
+            <th>Hizlaria</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
           </tr>
         </thead>
         <tbody>
+<!--
           <tr><td colspan="6"></td></tr>
           <tr>
             <td>M(LP)</td>
@@ -85,6 +87,7 @@
             <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_05679_middle_euclidean.wav" type="audio/wav"></audio></td>
             <td><audio controls="controls"><source src="index_fitxategiak/t_2_eum_05679_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
+-->
           <tr><td colspan="6"></td></tr>
           <tr>
 			<td>M(MP)</td>
@@ -147,10 +150,11 @@
       <table>
         <thead>
           <tr>
-            <th>Speaker</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
+            <th>Hizlaria</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
           </tr>
         </thead>
         <tbody>
+<!--
           <tr><td colspan="6"></td></tr>
           <tr>
             <td>M(LP)</td>
@@ -160,6 +164,7 @@
             <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_05679_middle_euclidean.wav" type="audio/wav"></audio></td>
             <td><audio controls="controls"><source src="index_fitxategiak/t_22_eum_05679_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
+-->
           <tr><td colspan="6"></td></tr>
           <tr>
 			<td>M(MP)</td>
@@ -221,10 +226,11 @@
       <table>
         <thead>
           <tr>
-            <th>Speaker</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
+            <th>Hizlaria</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
           </tr>
         </thead>
         <tbody>
+<!--
           <tr><td colspan="6"></td></tr>
           <tr>
             <td>M(LP)</td>
@@ -234,6 +240,7 @@
             <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_05679_middle_euclidean.wav" type="audio/wav"></audio></td>
             <td><audio controls="controls"><source src="index_fitxategiak/t_25_eum_05679_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
+-->
           <tr><td colspan="6"></td></tr>
           <tr>
 			<td>M(MP)</td>
@@ -295,10 +302,11 @@
       <table>
         <thead>
           <tr>
-            <th>Speaker</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
+            <th>Hizlaria</th><th>GT</th><th>MT2</th><th>MT2-DLN</th><th>MT2+GA</th><th>MT2-DLN+GA</th>
           </tr>
         </thead>
         <tbody>
+<!--
           <tr><td colspan="6"></td></tr>
           <tr>
             <td>M(LP)</td>
@@ -308,6 +316,7 @@
             <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_05679_middle_euclidean.wav" type="audio/wav"></audio></td>
             <td><audio controls="controls"><source src="index_fitxategiak/t_36_eum_05679_middle_emb_norm_scale_short.wav" type="audio/wav"></audio></td>
           </tr>
+-->
           <tr><td colspan="6"></td></tr>
           <tr>
 			<td>M(MP)</td>
